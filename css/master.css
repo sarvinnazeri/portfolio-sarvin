@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+@font-face {
+    font-family: 'roboto-mono';
+    src: url(../fonts/roboto.ttf)
+}
+@font-face {
+    font-family: 'popins1';
+    src: url(../fonts/Poppins/Poppins-Medium.ttf)
+}
+
+.tab {
+    overflow: hidden;
+    }
+    .tab-content {
+    max-height: 0;
+    transition: all 0.5s;
+    }
+    input:checked + .tab-label .test {
+        background-color: #000;
+    }
+    input:checked + .tab-label .test svg {
+        transform: rotate(180deg);
+        stroke: #fff;
+    }
+    input:checked + .tab-label::after {
+    transform: rotate(90deg);
+    }
+    input:checked ~ .tab-content {
+    max-height: 100vh;
+    }
+
+
